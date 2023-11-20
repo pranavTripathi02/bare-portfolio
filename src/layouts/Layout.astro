@@ -1,0 +1,38 @@
+---
+import "../../public/style.css";
+import Grain from "../components/grain/Grain.astro";
+import Footer from "../components/Footer.astro";
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <div class="mx-auto max-w-container px-4">
+            <header
+                class="mt-2 flex items-center justify-between"
+                style={{ height: "37.5px" }}
+            >
+                <slot name="header-content">
+                    <a href="/">← back</a>
+                </slot>
+            </header>
+
+            <slot />
+            <Grain opacity={0.3} />
+        </div>
+        <Footer />
+    </body>
+</html>
