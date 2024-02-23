@@ -1,9 +1,7 @@
 ---
-// import { Link } from "../lib/Link";
-// import Icon from "./Icon.astro";
-import SitemapSVG from "../assets/sitemap.svg?raw"
-import MailSVG from "../assets/mail.svg?raw"
-import GithubSVG from "../assets/github.svg?raw"
+import SitemapSVG from "../assets/sitemap.svg?raw";
+import MailSVG from "../assets/mail.svg?raw";
+import GithubSVG from "../assets/github.svg?raw";
 ---
 
 <div class="mb-0 text-[var(--text)] mt-16 opacity-80">
@@ -19,9 +17,7 @@ import GithubSVG from "../assets/github.svg?raw"
 				target="_blank"
 				aria-label="sitemap link"
 			>
-				<div>
-						<Fragment set:html={SitemapSVG}/>
-				</div>
+				<Fragment set:html={SitemapSVG} />
 			</a>
 
 			<a
@@ -30,20 +26,15 @@ import GithubSVG from "../assets/github.svg?raw"
 				target="_blank"
 				aria-label="mail link"
 			>
-				<div>
-						<Fragment set:html={MailSVG}/>
-				</div>
-
-				<a
-					class="hover:animate-pulse"
-					href="https://github.com/pranavTripathi02"
-					target="_blank"
-					aria-label="github link"
-				>
-					<div title="GitHub">
-						<Fragment set:html={GithubSVG}/>
-					</div>
-				</a>
+				<Fragment set:html={MailSVG} />
+			</a>
+			<a
+				class="hover:animate-pulse"
+				href="https://github.com/pranavTripathi02"
+				target="_blank"
+				aria-label="github link"
+			>
+				<Fragment set:html={GithubSVG} />
 			</a>
 		</div>
 	</footer>
