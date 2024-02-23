@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
 @import url('https://fonts.googleapis.com/css?family=Brygada+1918:ital@1');
-  /* @import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital@1&family=Inter:wght@100&family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -17,18 +16,20 @@
         white 60%
     );
     --text: #e5e5e5;
-    /* --bg: #1a1a1a; */
+    --text-alt: #a5a5a5;
     --bg: #171717;
 }
 body {
     background: var(--bg);
     font-family: "Inter";
+	font-display: swap;
 
     line-height: 1.6;
     font-size: 1rem;
     padding: 1rem 0;
     min-height: 100vh;
-    color:white;
+    color:var(--text);
+	/* color:black; */
 }
 i {
     font-family: "Brygada 1918";

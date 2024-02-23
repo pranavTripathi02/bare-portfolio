@@ -49,7 +49,7 @@ export const getProjects = (): Project[] => {
       url: "https://phenomenal-mandazi-44dcf1.netlify.app/",
       repo: "Hacker News",
       repoLink: "https://github.com/pranavTripathi02/Hacker-News-React",
-      desc: "Frontend using news.ycombinator.com api; created using React",
+      desc: "Frontend using news.ycombinator.com api, created using React",
     },
   ];
 };

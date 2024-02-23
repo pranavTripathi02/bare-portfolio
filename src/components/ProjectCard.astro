@@ -1,25 +1,25 @@
 ---
-interface Props {
-    url: string;
-    repo: string;
-    repoLink: string;
-    desc: string;
-}
+import Icon from './Icon.astro'
+// interface Props {
+//     url: string;
+//     repo: string;
+//     repoLink: string;
+//     desc: string;
+// }
 
 const { url, repo, repoLink, desc } = Astro.props;
-console.log(Astro.props);
 ---
 
 <div class="project">
 <a href={url} class="underline underline-offset-4 decoration-gray-700 hover:decoration-gray-100 duration-[.4s] transition ease-in-out" target="_blank">
-    <h3 class="hover-1 max-w-fit">
+    <h3 class="hover-1 max-w-fit text-[var(--text)]">
     {repo}
-<svg class="inline-block text-gray-500" xmlns="http://www.w3.org/2000/svg" width="1.25rem" height="1.25rem" viewBox="0 0 256 256"><path fill="currentColor" d="M196 64v104a4 4 0 0 1-8 0V73.66L66.83 194.83a4 4 0 0 1-5.66-5.66L182.34 68H88a4 4 0 0 1 0-8h104a4 4 0 0 1 4 4Z"/></svg>
+	<Icon icon='open_link'/>
     </h3>
 </a>
-<div class="mt-2 text-gray-500">
+<div class="mt-2 text-[var(--text-alt)]">
 <p class="text-md">{desc}</p>
-<a href={repoLink} class="text-xs m-0 text-gray-400 hover:underline" target="_blank">
+<a href={repoLink} class="text-xs m-0 text-[var(--text-alt)] hover:underline" target="_blank">
 check repo
 </a>
 </div>

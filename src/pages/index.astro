@@ -4,7 +4,7 @@ import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Pranav">
-    <h1 slot="header-content" class="text-gray-500">Pranav Dutt Tripathi</h1>
+    <h1 slot="header-content" class="text-[var(--text-alt)]">Pranav Dutt Tripathi</h1>
 
     <div class="main">
         <main class="py-10">
@@ -12,7 +12,6 @@ import Projects from "../components/Projects.astro";
             looking for exciting projects and opportunities. I enjoy working
             with computers, writing code, tinkering with and building software.
         </main>
-        <br />
         <p>
             <i>Now,</i>
             <br />
@@ -20,32 +19,31 @@ import Projects from "../components/Projects.astro";
             build interactive and user-friendly web applications as well as
             experimenting with user interfaces and polishing web experiences for
             fun.
+			</p>
             <br />
-            <br />
+			<p>
              Take a look at some of my
             <a
-                class="underline underline-offset-4 hover-1"
+                class="underline inline-block underline-offset-4 hover-1"
                 href="https://github.com/pranavTripathi02">projects</a
-            >click here
-        </p> to send me an email. Thanks for stopping by!
+            >
+			or
+            <a
+                class="underline inline-block underline-offset-4 hover-1"
+                href="mailto:pranav02.tripathi@gmail.com">click here</a>
+			
+        to send me an email. Thanks for stopping by!
+</p> 
     </div>
     <Projects />
 </Layout>
 
 <style>
-    main {
-        color: white;
-    }
-    .text-gradient {
-        background-image: var(--accent-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 400%;
-        background-position: 0%;
-    }
+	h1 {
+		font-size: 1.25rem;
+	}
     .hover-1 {
-        background: linear-gradient(#252525 0 0) var(--p, 0%) / var(--p, 0%)
-            no-repeat;
+        background: linear-gradient(#252525 0 0) var(--p, 0%) / var(--p, 0%) no-repeat;
         transition:
             0.4s,
             background-position 0s;
