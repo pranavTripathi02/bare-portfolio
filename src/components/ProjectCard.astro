@@ -1,44 +1,55 @@
 ---
-import Icon from './Icon.astro'
-// interface Props {
-//     url: string;
-//     repo: string;
-//     repoLink: string;
-//     desc: string;
-// }
+import Icon from "./Icon.astro";
+interface Props {
+    url: string;
+    repo: string;
+    repoLink: string;
+    desc: string;
+}
 
-const { url, repo, repoLink, desc } = Astro.props;
+const { url, repo, repoLink, desc } = Astro.props as Props;
 ---
 
 <div class="project">
-<a href={url} class="underline underline-offset-4 decoration-gray-700 hover:decoration-gray-100 duration-[.4s] transition ease-in-out" target="_blank">
-    <h3 class="hover-1 max-w-fit text-[var(--text)]">
-    {repo}
-	<Icon icon='open_link'/>
-    </h3>
-</a>
-<div class="mt-2 text-[var(--text-alt)]">
-<p class="text-md">{desc}</p>
-<a href={repoLink} class="text-xs m-0 text-[var(--text-alt)] hover:underline" target="_blank">
-check repo
-</a>
-</div>
+	<a
+		href={url}
+		class="underline underline-offset-4 decoration-gray-700 hover:decoration-gray-100 duration-[.4s] transition ease-in-out"
+		target="_blank"
+	>
+		<h3 class="hover-1 max-w-fit text-[var(--text)]">
+			{repo}
+			<Icon icon="open_link" />
+		</h3>
+	</a>
+	<div class="mt-2 text-[var(--text-alt)]">
+		<p class="text-md">{desc}</p>
+		<a
+			href={repoLink}
+			class="text-xs m-0 text-[var(--text-alt)] hover:underline"
+			target="_blank"
+		>
+			check repo
+		</a>
+	</div>
 </div>
 
 <style>
-* {
-    overflow-x:hidden;
-    overflow-x:ellipsis;
-}
-h3{
-    text-transform:capitalize;
-}
-.hover-1 {
-  background: linear-gradient(#252525 0 0) var(--p, 0%) / var(--p,0%) no-repeat;
-  transition: .4s, background-position 0s;
-  border-radius:.275rem;
-}
-.hover-1:hover {
-  --p: 100%;
-}
+	* {
+		overflow-x: hidden;
+		overflow-x: ellipsis;
+	}
+	h3 {
+		text-transform: capitalize;
+	}
+	.hover-1 {
+		background: linear-gradient(#252525 0 0) var(--p, 0%) / var(--p, 0%)
+			no-repeat;
+		transition:
+			0.4s,
+			background-position 0s;
+		border-radius: 0.275rem;
+	}
+	.hover-1:hover {
+		--p: 100%;
+	}
 </style>
