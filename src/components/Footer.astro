@@ -1,6 +1,9 @@
 ---
 // import { Link } from "../lib/Link";
-import Icon from "./Icon.astro";
+// import Icon from "./Icon.astro";
+import SitemapSVG from "../assets/sitemap.svg?raw"
+import MailSVG from "../assets/mail.svg?raw"
+import GithubSVG from "../assets/github.svg?raw"
 ---
 
 <div class="mb-0 text-[var(--text)] mt-16 opacity-80">
@@ -17,7 +20,7 @@ import Icon from "./Icon.astro";
 				aria-label="sitemap link"
 			>
 				<div>
-					<Icon icon="sitemap" />
+						<Fragment set:html={SitemapSVG}/>
 				</div>
 			</a>
 
@@ -28,7 +31,7 @@ import Icon from "./Icon.astro";
 				aria-label="mail link"
 			>
 				<div>
-					<Icon icon="mail" />
+						<Fragment set:html={MailSVG}/>
 				</div>
 
 				<a
@@ -38,7 +41,7 @@ import Icon from "./Icon.astro";
 					aria-label="github link"
 				>
 					<div title="GitHub">
-						<Icon icon="github" />
+						<Fragment set:html={GithubSVG}/>
 					</div>
 				</a>
 			</a>

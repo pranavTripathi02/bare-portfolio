@@ -1,13 +1,14 @@
 ---
-import Icon from "./Icon.astro";
 interface Props {
     url: string;
     repo: string;
     repoLink: string;
     desc: string;
 }
-
 const { url, repo, repoLink, desc } = Astro.props as Props;
+
+import OpenLinkSVG from '../assets/open_link.svg?raw'
+import OpenLinkSVGurl from '../assets/open_link.svg?url'
 ---
 
 <div class="project">
@@ -16,9 +17,9 @@ const { url, repo, repoLink, desc } = Astro.props as Props;
 		class="underline underline-offset-4 decoration-gray-700 hover:decoration-gray-100 duration-[.4s] transition ease-in-out"
 		target="_blank"
 	>
-		<h3 class="hover-1 max-w-fit text-[var(--text)]">
+		<h3 class="hover-1 max-w-fit text-[var(--text)] flex">
 			{repo}
-			<Icon icon="open_link" />
+			<Fragment set:html={OpenLinkSVG} class="inline-block"/>
 		</h3>
 	</a>
 	<div class="mt-2 text-[var(--text-alt)]">
@@ -37,6 +38,10 @@ const { url, repo, repoLink, desc } = Astro.props as Props;
 	* {
 		overflow-x: hidden;
 		overflow-x: ellipsis;
+	}
+	img,svg{
+		fill:var(--text);
+		fill:var(--text);
 	}
 	h3 {
 		text-transform: capitalize;
