@@ -1,109 +1,118 @@
-@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
-@import url('https://fonts.googleapis.com/css?family=Brygada+1918:ital@1');
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Brygada+1918:ital@1&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-    );
-    --text: #e5e5e5;
-    --text-alt: #8a8a8a;
-    --bg: #171717;
+	--accent: 136, 58, 234;
+	--accent-light: 224, 204, 250;
+	--accent-dark: 49, 10, 101;
+	--accent-gradient: linear-gradient(45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%);
+	--text: #e5e5e5;
+	--text-alt: #8a8a8a;
+	--bg: #171717;
 }
-body {
-    background: var(--bg);
-    font-family: "Inter";
-	font-display: swap;
 
-    line-height: 1.6;
-    font-size: 1rem;
-    padding: 1rem 0;
-    min-height: 100vh;
-    color:var(--text);
+body {
+	background: var(--bg);
+	font-family: "Inter",system-ui,sans-serif;
+
+	line-height: 1.6;
+	font-size: 1rem;
+	padding: 1rem 0;
+	min-height: 100vh;
+	color: var(--text);
 	/* color:black; */
 }
+
 i {
-    font-family: "Brygada 1918";
+	font-family: "Brygada 1918",serif;
 }
-h1,h2 {
-    letter-spacing: -0.02em;
+
+h1,
+h2 {
+	letter-spacing: -0.02em;
 }
-h3,h4,h5,h6 {
-    letter-spacing: -1.5%;
+
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: -1.5%;
 }
+
 body,
 html {
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
-    /**/
-    html {
-        scroll-behavior: smooth;
-        font-smooth: antialiased;
-        text-rendering: optimizeLegibility;
-    }
-    * {
-  --un-outline-color-opacity: 1;
-  outline-color: rgb(255 255 255 / var(--un-outline-color-opacity));
-  }
-    /**/
-    /**/
-    /* code, */
-    /* pre { */
-    /*     font-family: "Hack", "Courier New", Courier, monospace; */
-    /* } */
-    /**/
-    /* .prose { */
-    /*     @apply max-w-container [&>:not(:last-child)]:mb-6; */
-    /**/
-    /*     & p { */
-    /*         @apply my-6 line-height-7.2; */
-    /*     } */
-    /**/
-    /*     & h1, */
-    /*     & h2, */
-    /*     & h3 { */
-    /*         @apply text-neutral-100 font-semibold my-8; */
-    /*     } */
-    /**/
-    /*     & h1 { */
-    /*         @apply text-2xl; */
-    /*     } */
-    /**/
-    /*     & h2 { */
-    /*         @apply text-xl; */
-    /*     } */
-    /**/
-    /*     & h3 { */
-    /*         @apply text-lg; */
-    /*     } */
-    /**/
-    /*     & strong { */
-    /*         @apply font-medium text-neutral-100; */
-    /*     } */
-    /**/
-    /*     & hr { */
-    /*         @apply border-neutral-600 border-b-0.5; */
-    /*     } */
-    /**/
-    /*     & ul { */
-    /*         @apply list-disc list-outside pl-4; */
-    /*     } */
-    /**/
-    /*     & ul > li { */
-    /*         @apply mb-2; */
-    /*     } */
-    /**/
-    /*     & img { */
-    /*         @apply mx-auto rounded my-6; */
-    /*     } */
-    /* } */
-    /**/
+
+/**/
+html {
+	scroll-behavior: smooth;
+	font-smooth: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+* {
+	--un-outline-color-opacity: 1;
+	outline-color: rgb(255 255 255 / var(--un-outline-color-opacity));
+}
+
+/**/
+/**/
+/* code, */
+/* pre { */
+/*     font-family: "Hack", "Courier New", Courier, monospace; */
+/* } */
+/**/
+/* .prose { */
+/*     @apply max-w-container [&>:not(:last-child)]:mb-6; */
+/**/
+/*     & p { */
+/*         @apply my-6 line-height-7.2; */
+/*     } */
+/**/
+/*     & h1, */
+/*     & h2, */
+/*     & h3 { */
+/*         @apply text-neutral-100 font-semibold my-8; */
+/*     } */
+/**/
+/*     & h1 { */
+/*         @apply text-2xl; */
+/*     } */
+/**/
+/*     & h2 { */
+/*         @apply text-xl; */
+/*     } */
+/**/
+/*     & h3 { */
+/*         @apply text-lg; */
+/*     } */
+/**/
+/*     & strong { */
+/*         @apply font-medium text-neutral-100; */
+/*     } */
+/**/
+/*     & hr { */
+/*         @apply border-neutral-600 border-b-0.5; */
+/*     } */
+/**/
+/*     & ul { */
+/*         @apply list-disc list-outside pl-4; */
+/*     } */
+/**/
+/*     & ul > li { */
+/*         @apply mb-2; */
+/*     } */
+/**/
+/*     & img { */
+/*         @apply mx-auto rounded my-6; */
+/*     } */
+/* } */
+/**/
