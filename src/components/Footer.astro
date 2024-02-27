@@ -2,40 +2,83 @@
 import SitemapSVG from "../assets/sitemap.svg?raw";
 import MailSVG from "../assets/mail.svg?raw";
 import GithubSVG from "../assets/github.svg?raw";
+import ScrollSVG from "../assets/scroll.svg?raw";
 ---
 
 <div class="mb-0 text-[var(--text)] mt-16 opacity-80">
 	<hr class="h-px border-0 bg-[var(--text-alt)] opacity-30" />
 
-	<footer class="flex justify-between px-2 mt-4 max-w-container mx-auto">
-		<h1>Pranav Dutt Tripathi</h1>
+	<footer class="flex justify-between px-2 mt-4 max-w-container mx-auto items-center h-fit">
+		<span>Pranav Dutt Tripathi</span>
 
 		<div class="flex gap-4">
 			<a
-				class="hover:animate-pulse"
+				class="hover:animate-pulse tooltip"
 				href="/sitemap-index.xml"
 				target="_blank"
 				aria-label="sitemap link"
 			>
-				<Fragment set:html={SitemapSVG} />
+            <span class="tooltiptext">Sitemap</span>
+				<Fragment set:html={SitemapSVG} class='fragment'/>
 			</a>
 
 			<a
-				class="hover:animate-pulse"
+				class="hover:animate-pulse tooltip"
 				href="mailto:pranav02.tripathi@gmail.com"
 				target="_blank"
 				aria-label="mail link"
 			>
-				<Fragment set:html={MailSVG} />
+            <span class="tooltiptext">Mail</span>
+				<Fragment set:html={MailSVG} 
+                />
 			</a>
 			<a
-				class="hover:animate-pulse"
+				class="hover:animate-pulse tooltip"
 				href="https://github.com/pranavTripathi02"
 				target="_blank"
 				aria-label="github link"
 			>
+            <span class="tooltiptext">Github</span>
 				<Fragment set:html={GithubSVG} />
 			</a>
+			<!-- <a -->
+			<!-- 	class="hover:animate-pulse tooltip" -->
+			<!-- 	href="https://github.com/pranavTripathi02" -->
+			<!-- 	target="_blank" -->
+			<!-- 	aria-label="resume link" -->
+			<!-- > -->
+   <!--          <span class="tooltiptext">Resume</span> -->
+			<!-- 	<Fragment set:html={ScrollSVG} /> -->
+			<!-- </a> -->
 		</div>
 	</footer>
 </div>
+
+<style>
+.tooltip {
+    position:relative;
+    animation:none;
+    display:inline-block;
+}
+.tooltiptext {
+    visibility:hidden;
+    width:fit;
+    height: 1.5rem;
+    position:absolute;
+    text-align:center;
+    padding:0 1rem;
+    bottom:125%;
+    left:50%;
+    transform: translateX(-50%);
+    background:var(--bg);
+
+    border-bottom:1px dotted white;
+
+    opacity:0;
+    transition: opacity .05s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity:1;
+}
+</style>

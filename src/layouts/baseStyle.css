@@ -18,6 +18,11 @@
 	--bg: #171717;
 }
 
+svg {
+    width:1rem;
+    height:1rem;
+}
+
 body {
 	background: var(--bg);
 	font-family: "Inter",system-ui,sans-serif;
@@ -51,7 +56,6 @@ html {
 	overflow-x: hidden;
 }
 
-/**/
 html {
 	scroll-behavior: smooth;
 	font-smooth: antialiased;
@@ -62,57 +66,3 @@ html {
 	--un-outline-color-opacity: 1;
 	outline-color: rgb(255 255 255 / var(--un-outline-color-opacity));
 }
-
-/**/
-/**/
-/* code, */
-/* pre { */
-/*     font-family: "Hack", "Courier New", Courier, monospace; */
-/* } */
-/**/
-/* .prose { */
-/*     @apply max-w-container [&>:not(:last-child)]:mb-6; */
-/**/
-/*     & p { */
-/*         @apply my-6 line-height-7.2; */
-/*     } */
-/**/
-/*     & h1, */
-/*     & h2, */
-/*     & h3 { */
-/*         @apply text-neutral-100 font-semibold my-8; */
-/*     } */
-/**/
-/*     & h1 { */
-/*         @apply text-2xl; */
-/*     } */
-/**/
-/*     & h2 { */
-/*         @apply text-xl; */
-/*     } */
-/**/
-/*     & h3 { */
-/*         @apply text-lg; */
-/*     } */
-/**/
-/*     & strong { */
-/*         @apply font-medium text-neutral-100; */
-/*     } */
-/**/
-/*     & hr { */
-/*         @apply border-neutral-600 border-b-0.5; */
-/*     } */
-/**/
-/*     & ul { */
-/*         @apply list-disc list-outside pl-4; */
-/*     } */
-/**/
-/*     & ul > li { */
-/*         @apply mb-2; */
-/*     } */
-/**/
-/*     & img { */
-/*         @apply mx-auto rounded my-6; */
-/*     } */
-/* } */
-/**/
