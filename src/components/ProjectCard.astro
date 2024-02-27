@@ -18,7 +18,7 @@ import OpenLinkSVG from '../assets/open_link.svg?raw'
 	>
 		<h3 class="hover-1 max-w-fit text-[var(--text)] flex">
 			{repo}
-			<Fragment set:html={OpenLinkSVG} class="open_link-icon inline-block"/>
+			<Fragment set:html={OpenLinkSVG}/>
 		</h3>
 	</a>
 	<div class="mt-2 text-[var(--text-alt)]">
@@ -35,6 +35,7 @@ import OpenLinkSVG from '../assets/open_link.svg?raw'
 
 <style is:inline>
 	.project svg {
+        display:inline-block;
         height:1.5rem;
         width:1.5rem;
 	}
